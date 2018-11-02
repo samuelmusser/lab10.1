@@ -44,7 +44,7 @@ public int factorial(int value)
        * By doing this, we break up the equation n! into n! = n * (n-1)!.
        */
 
-	//TOD
+	//TODO
 
 }
 
