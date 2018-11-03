@@ -28,13 +28,15 @@
    */
 public int factorial(int value)
 {
+     int total = 0;
       /*
        * Here is the base case (ending condition): value == 1.
        * This lets our recursion know when to stop.
        */
-
-	//TO
-		return 1;
+       if (value == 1)
+       {
+           return total;
+       }
 
       /*
        * Here is the recursive statement. The function calls itself when the base case is not met.
@@ -43,8 +45,7 @@ public int factorial(int value)
        * 
        * By doing this, we break up the equation n! into n! = n * (n-1)!.
        */
-
-	//TODO
+       return total = value * factorial(value-1);
 
 }
 
@@ -66,11 +67,13 @@ public int factorial(int value)
      */
 public int fibonacci(int n)
 {
-
-
-	//TODO
-
-	return 1;
+         if (n <= 1)
+         {
+             return 1;
+         }
+         
+         return fibonacci(n-1) + fibonacci(n-2);
+         
 }
     /**
      * Class that represents a tree. This is a data structure comprised of several nodes. Each node may
