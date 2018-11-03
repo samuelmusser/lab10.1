@@ -98,7 +98,7 @@ public int fibonacci(int n)
      */
 protected final class Tree
 {
-    private ArrayList<Tree> children;
+    private ArrayList<Tree> children = new ArrayList<>();
     private int value;
     
     public Tree(int value)
@@ -145,12 +145,18 @@ protected final class Tree
      */
 public int nnaryTreeSize(int branchingFactor, int height)
 {
+    int total = 0;
     if (height == 1) 
     {
-	//TODO
+        return 1;
     }
-	//TODO
-	return 1;
+    else
+    {
+        for(int i = 0; i < height; i++)
+            total += branchingFactor*height + branchingFactor;
+    }
+	
+	return total + nnaryTreeSize(branchingFactor, height -1);
 }
 
     /**
@@ -163,8 +169,7 @@ public int nnaryTreeSize(int branchingFactor, int height)
      */
 public int treeSum(Tree tree)
 {
-	//TODO
-	return 1;
+	return tree.getValue();
 }
     
     /**
