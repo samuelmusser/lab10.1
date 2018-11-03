@@ -35,7 +35,7 @@ public int factorial(int value)
        */
        if (value == 1)
        {
-           return total;
+           return 1;
        }
 
       /*
@@ -45,7 +45,7 @@ public int factorial(int value)
        * 
        * By doing this, we break up the equation n! into n! = n * (n-1)!.
        */
-       return total = value * factorial(value-1);
+       return value * factorial(value-1);
 
 }
 
@@ -103,24 +103,22 @@ protected final class Tree
     
     public Tree(int value)
     {
-	this.value = value;
+        this.value = value;
     }
     
     public int getValue()
     {
-	//TODO
-	return 1;
+        return this.value;
     }
     
     public ArrayList<Tree> getChildren()
     {
-	//TODO
-	return null;
+        return children;
     }
     
     public void add(Tree child)
     {
-	//TODO
+        children.add(child);
     }
 }
     
